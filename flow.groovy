@@ -1,3 +1,7 @@
 node('docker') {
-  sh "echo success"
+  docker.image('golang:1.5.1').inside('-v /home/jenkins-agent/workspace/$JOB_NAME:/usr/src/JOB_NAME -w /usr/src/JOB_NAME') {
+    git 'https://github.com/crcsmnky/gceme.git'
+    sh 'go get -d -v'
+    sh 'go test'
+  }
 }
