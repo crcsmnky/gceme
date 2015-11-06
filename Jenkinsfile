@@ -2,9 +2,9 @@ node('docker') {
   checkout scm
 
   // Kubernetes cluster info
-  def cluster = 'gtc'
+  def cluster = 'kd'
   def zone = 'us-central1-f'
-  def project = 'gtc-jenkins-lab'
+  def project = 'kubecon-demo'
 
   // Run tests
   stage 'Go tests'
