@@ -2,7 +2,7 @@ node('docker') {
   checkout scm
 
   // Kubernetes cluster info
-  def cluster = 'kd'
+  def cluster = 'kdemo'
   def zone = 'us-central1-f'
   def project = 'kubecon-demo'
 
